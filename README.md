@@ -1,6 +1,4 @@
 # react-native-image-placeholder
-React native Image Placeholder
-===
 
 The image component that supports shows placeholderSource when load image network. 
 Shows placeholderSource if the main source can't be loaded or error.
@@ -29,9 +27,9 @@ import ImageLoad from 'react-native-image-placeholder';
 ## Options
 Supports all [Image](https://facebook.github.io/react-native/docs/images.html) properties.
 
-option | Info
------- | ----
-placeholderSource | Show `placeholderSource` if the `source` can't be loaded.
+option |default |Info
+------ |---- |----
+placeholderSource |require('./Images/empty-image.png') |Show `placeholderSource` if the `source` can't be loaded or error.
 
 ## License
 
