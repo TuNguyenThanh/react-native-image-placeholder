@@ -4,6 +4,8 @@
 - Show placeholderSource if the main source can't be loaded or error.
 - Support custom ActivityIndicator loading.
 
+![Sample](screenshot.gif)
+
 ## Installation
 
 ```bash
