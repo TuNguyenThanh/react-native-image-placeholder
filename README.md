@@ -1,7 +1,7 @@
 # react-native-image-placeholder
 - Support Android and iOS.
 - The image component that supports shows placeholderSource when load image network.
-- Shows placeholderSource if the main source can't be loaded or error.
+- Show placeholderSource if the main source can't be loaded or error.
 - Support custom ActivityIndicator loading.
 
 ## Installation
@@ -29,7 +29,7 @@ import ImageLoad from 'react-native-image-placeholder';
 ## Options
 Supports all [Image](https://facebook.github.io/react-native/docs/images.html) properties.
 
-option |default |Info
+Option |Default |Info
 ------ |---- |----
 placeholderSource |require('./Images/empty-image.png') |Show `placeholderSource` if the `source` can't be loaded or error.
 loadingStyle |size: 'small'; color: 'gray' | Style ActivityIndicator
@@ -37,3 +37,4 @@ loadingStyle |size: 'small'; color: 'gray' | Style ActivityIndicator
 ## License
 
 ISC
+
