@@ -35,6 +35,7 @@ Option |Default |Info
 ------ |---- |----
 placeholderSource |require('./Images/empty-image.png') |Show `placeholderSource` if the `source` can't be loaded or error.
 loadingStyle |size: 'small'; color: 'gray' | Style ActivityIndicator
+placeholderStyle | | Style placeholder image
 
 ## License
 
