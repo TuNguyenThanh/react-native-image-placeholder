@@ -33,7 +33,7 @@ class ImageLoad extends React.Component {
         {
           this.state.isLoaded && !this.state.isError ? null :
           <Image
-            style={styles.imagePlaceholderStyles}
+            style={[styles.imagePlaceholderStyles, this.props.placeholderStyle]}
             source={this.props.placeholderSource ? this.props.placeholderSource : require('./Images/empty-image.png')}
           >
             {
