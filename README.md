@@ -1,4 +1,7 @@
-# react-native-image-placeholder
+# react-native-image-placeholder  [![npm version](https://badge.fury.io/js/react-native-image-placeholder.svg)](https://badge.fury.io/js/react-native-image-placeholder)
+
+[![NPM](https://nodei.co/npm/react-native-image-placeholder.png?downloads=true)](https://nodei.co/npm/react-native-image-placeholder/)
+
 - Support Android and iOS.
 - The image component that supports shows placeholderSource when load image network.
 - Show placeholderSource if the main source can't be loaded or error.
