@@ -1,7 +1,7 @@
 {
   "name": "react-native-image-placeholder",
-  "version": "1.0.3",
-  "description": "react naitve image placeholder",
+  "version": "1.0.4",
+  "description": "react native image placeholder",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
