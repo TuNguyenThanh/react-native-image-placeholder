@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Image, ActivityIndicator } from 'react-native';
 
 class ImageLoad extends React.Component {
+  static propTypes = {
+    isShowActivity: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    isShowActivity: true,
+	};
+
   constructor(props) {
     super(props);
     this.state = {
@@ -37,11 +45,13 @@ class ImageLoad extends React.Component {
             source={this.props.placeholderSource ? this.props.placeholderSource : require('./Images/empty-image.png')}
           >
             {
-              this.props.children ? this.props.children :
+              this.props.children  ? this.props.children :
+              this.props.isShowActivity ?
               <ActivityIndicator
                 size={this.props.loadingStyle ? this.props.loadingStyle.size : 'small'}
                 color={this.props.loadingStyle ? this.props.loadingStyle.color : 'gray'}
-              />
+              /> :
+              null
             }
           </Image>
         }
