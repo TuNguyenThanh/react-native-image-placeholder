@@ -37,6 +37,7 @@ class ImageLoad extends React.Component {
         onError={this.onError.bind(this)}
         style={[this.props.style, { alignItems: 'center' }]}
         source={this.props.source}
+        resizeMode={this.props.resizeMode}
       >
         {
           this.state.isLoaded && !this.state.isError ? null :
