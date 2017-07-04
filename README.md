@@ -40,6 +40,7 @@ placeholderSource |require('./Images/empty-image.png') |Show `placeholderSource`
 loadingStyle |size: 'small'; color: 'gray' | Style ActivityIndicator
 isShowActivity | true | Show ActivityIndicator loading
 placeholderStyle | | Style placeholder image
+customImagePlaceholderDefaultStyle | | Custom style image placeholder default
 
 ## License
 
