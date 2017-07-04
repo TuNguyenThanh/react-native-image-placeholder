@@ -9,6 +9,9 @@
 
 ![Sample](screenshot.gif)
 
+## What's new
+Fixed render inside <ImageLoad /> component
+
 ## Installation
 
 ```bash
