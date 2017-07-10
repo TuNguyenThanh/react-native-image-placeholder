@@ -38,6 +38,7 @@ class ImageLoad extends React.Component {
         style={this.props.style}
         source={this.props.source}
         resizeMode={this.props.resizeMode}
+        borderRadius={this.props.borderRadius}
       >
         {
           (this.state.isLoaded && !this.state.isError) ? this.props.children :
