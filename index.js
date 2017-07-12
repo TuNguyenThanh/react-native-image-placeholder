@@ -47,10 +47,13 @@ class ImageLoad extends React.Component {
               style={this.props.placeholderStyle ? this.props.placeholderStyle : [styles.imagePlaceholderStyles, this.props.customImagePlaceholderDefaultStyle]}
               source={this.props.placeholderSource ? this.props.placeholderSource : require('./Images/empty-image.png')}
             >
-              <ActivityIndicator
-                size={this.props.loadingStyle ? this.props.loadingStyle.size : 'small'}
-                color={this.props.loadingStyle ? this.props.loadingStyle.color : 'gray'}
-              />
+              {
+                this.props.isShowActivity &&
+                <ActivityIndicator
+                  size={this.props.loadingStyle ? this.props.loadingStyle.size : 'small'}
+                  color={this.props.loadingStyle ? this.props.loadingStyle.color : 'gray'}
+                />
+              }
             </Image>
           </View>
         }
