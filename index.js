@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Image, ActivityIndicator, View } from 'react-native';
+import { Image, ImageBackground, ActivityIndicator, View } from 'react-native';
 
 class ImageLoad extends React.Component {
   static propTypes = {
@@ -32,7 +32,7 @@ class ImageLoad extends React.Component {
 
   render() {
     return(
-      <Image
+      <ImageBackground
         onLoadEnd={this.onLoadEnd.bind(this)}
         onError={this.onError.bind(this)}
         style={this.props.style}
@@ -65,7 +65,7 @@ class ImageLoad extends React.Component {
           }
           </View>
         }
-      </Image>
+      </ImageBackground>
     );
   }
 }
