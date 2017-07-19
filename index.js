@@ -77,8 +77,7 @@ const styles = {
   },
   activityIndicator: {
     position: 'absolute',
-    top: '50%',
-    left: '50%',
+    margin: 'auto',
     zIndex: 9,
   },
   viewImageStyles: {
