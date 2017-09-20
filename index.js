@@ -42,7 +42,7 @@ class ImageLoad extends React.Component {
       >
         {
           (this.state.isLoaded && !this.state.isError) ? this.props.children :
-          <View style={[styles.viewImageStyles, { borderRadius }>
+          <View style={[styles.viewImageStyles, this.props.borderRadius ? {borderRadius: this.props.borderRadius} : null]}>
             {
               this.props.isShowActivity &&
               <ActivityIndicator
