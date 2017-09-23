@@ -9,6 +9,9 @@
 
 ![Sample](screenshot.gif)
 
+## Require
+React-native >= 0.46.x
+
 ## What's new
 Fixed render inside <ImageLoad /> component
 
