@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-placeholder",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "react native image placeholder",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/TuNguyenThanh/react-native-image-placeholder.git"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
   },
   "keywords": [
     "react native image placeholder",

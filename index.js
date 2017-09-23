@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Image, ImageBackground, ActivityIndicator, View } from 'react-native';
 
 class ImageLoad extends React.Component {
@@ -31,29 +32,34 @@ class ImageLoad extends React.Component {
   }
 
   render() {
+    const {
+      style, source, resizeMode, borderRadius, children,
+      loadingStyle, placeholderSource, placeholderStyle,
+      customImagePlaceholderDefaultStyle
+    } = this.props;
     return(
       <ImageBackground
         onLoadEnd={this.onLoadEnd.bind(this)}
         onError={this.onError.bind(this)}
-        style={[styles.backgroundImage, this.props.style]}
-        source={this.props.source}
-        resizeMode={this.props.resizeMode}
-        borderRadius={this.props.borderRadius}
+        style={[styles.backgroundImage, style]}
+        source={source}
+        resizeMode={resizeMode}
+        borderRadius={borderRadius}
       >
         {
-          (this.state.isLoaded && !this.state.isError) ? this.props.children :
-          <View style={styles.viewImageStyles}>
+          (this.state.isLoaded && !this.state.isError) ? children :
+          <View style={[styles.viewImageStyles, { borderRadius: borderRadius }]}>
             {
               this.props.isShowActivity &&
               <ActivityIndicator
                 style={styles.activityIndicator}
-                size={this.props.loadingStyle ? this.props.loadingStyle.size : 'small'}
-                color={this.props.loadingStyle ? this.props.loadingStyle.color : 'gray'}
+                size={loadingStyle ? loadingStyle.size : 'small'}
+                color={loadingStyle ? loadingStyle.color : 'gray'}
               />
             }
             <Image
-              style={this.props.placeholderStyle ? this.props.placeholderStyle : [styles.imagePlaceholderStyles, this.props.customImagePlaceholderDefaultStyle]}
-              source={this.props.placeholderSource ? this.props.placeholderSource : require('./Images/empty-image.png')}
+              style={placeholderStyle ? placeholderStyle : [styles.imagePlaceholderStyles, customImagePlaceholderDefaultStyle]}
+              source={placeholderSource ? placeholderSource : require('./Images/empty-image.png')}
             >
             </Image>
           </View>
