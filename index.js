@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Image, ImageBackground, ActivityIndicator, View } from 'react-native';
 
-class ImageLoad extends React.Component {
+class ImageLoad extends React.PureComponent {
   static propTypes = {
     isShowActivity: PropTypes.bool,
   };
@@ -19,17 +19,17 @@ class ImageLoad extends React.Component {
     };
   }
 
-  onLoadEnd(){
+  onLoadEnd = () => {
     this.setState({
       isLoaded: true
     });
-  }
+  };
 
-  onError(){
+  onError = () => {
     this.setState({
       isError: true
     });
-  }
+  };
 
   render() {
     const {
@@ -39,8 +39,8 @@ class ImageLoad extends React.Component {
     } = this.props;
     return(
       <ImageBackground
-        onLoadEnd={this.onLoadEnd.bind(this)}
-        onError={this.onError.bind(this)}
+        onLoadEnd={this.onLoadEnd}
+        onError={this.onError}
         style={[styles.backgroundImage, style]}
         source={source}
         resizeMode={resizeMode}
