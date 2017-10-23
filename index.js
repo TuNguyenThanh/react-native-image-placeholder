@@ -33,7 +33,7 @@ class ImageLoad extends React.Component {
 
   render() {
     const {
-      style, source, resizeMode, borderRadius, children,
+      style, source, resizeMode, borderRadius, backgroundColor, children,
       loadingStyle, placeholderSource, placeholderStyle,
       customImagePlaceholderDefaultStyle
     } = this.props;
@@ -48,7 +48,9 @@ class ImageLoad extends React.Component {
       >
         {
           (this.state.isLoaded && !this.state.isError) ? children :
-          <View style={[styles.viewImageStyles, { borderRadius: borderRadius }]}>
+          <View 
+            style={[styles.viewImageStyles, { borderRadius: borderRadius }, backgroundColor ? { backgroundColor: backgroundColor } : {}]}
+          >
             {
               this.props.isShowActivity &&
               <ActivityIndicator
