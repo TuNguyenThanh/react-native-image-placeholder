@@ -52,7 +52,7 @@ class ImageLoad extends React.Component {
             style={[styles.viewImageStyles, { borderRadius: borderRadius }, backgroundColor ? { backgroundColor: backgroundColor } : {}]}
           >
             {
-              this.props.isShowActivity &&
+              (this.props.isShowActivity && !this.state.isError) &&
               <ActivityIndicator
                 style={styles.activityIndicator}
                 size={loadingStyle ? loadingStyle.size : 'small'}
