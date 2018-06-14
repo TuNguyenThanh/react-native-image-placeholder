@@ -9,6 +9,7 @@ class ImageLoad extends React.Component {
 
   static defaultProps = {
     isShowActivity: true,
+    defaultPicutre: require('./Images/empty-image.png')
 	};
 
   constructor(props) {
@@ -35,7 +36,7 @@ class ImageLoad extends React.Component {
     const {
       style, source, resizeMode, borderRadius, backgroundColor, children,
       loadingStyle, placeholderSource, placeholderStyle,
-      customImagePlaceholderDefaultStyle
+      customImagePlaceholderDefaultStyle, defaultPicutre
     } = this.props;
     return(
       <ImageBackground
@@ -61,7 +62,7 @@ class ImageLoad extends React.Component {
             }
             <Image
               style={placeholderStyle ? placeholderStyle : [styles.imagePlaceholderStyles, customImagePlaceholderDefaultStyle]}
-              source={placeholderSource ? placeholderSource : require('./Images/empty-image.png')}
+              source={placeholderSource ? placeholderSource : defaultPicutre}
             >
             </Image>
           </View>

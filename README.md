@@ -48,6 +48,8 @@ isShowActivity | true | Show ActivityIndicator loading
 placeholderStyle | | Style placeholder image
 customImagePlaceholderDefaultStyle | | Custom style image placeholder default
 borderRadius | | Border radius
+
+to disable default placeholder image || defaultPicture={null}
 ## License
 
 ISC
