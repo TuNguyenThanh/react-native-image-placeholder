@@ -9,7 +9,7 @@ class ImageLoad extends React.Component {
 
   static defaultProps = {
     isShowActivity: true,
-	};
+  };
 
   constructor(props) {
     super(props);
@@ -19,13 +19,13 @@ class ImageLoad extends React.Component {
     };
   }
 
-  onLoadEnd(){
+  onLoadEnd() {
     this.setState({
       isLoaded: true
     });
   }
 
-  onError(){
+  onError() {
     this.setState({
       isError: true
     });
@@ -37,42 +37,29 @@ class ImageLoad extends React.Component {
       loadingStyle, placeholderSource, placeholderStyle,
       customImagePlaceholderDefaultStyle
     } = this.props;
-    return(
+    return (
       <ImageBackground
         onLoadEnd={this.onLoadEnd.bind(this)}
         onError={this.onError.bind(this)}
         style={[styles.backgroundImage, style]}
         source={source}
+        imageStyle={[style]}
         resizeMode={resizeMode}
         borderRadius={borderRadius}
       >
         {
           (this.state.isLoaded && !this.state.isError) ? children :
-          <View 
-            style={[styles.viewImageStyles, { borderRadius: borderRadius }, backgroundColor ? { backgroundColor: backgroundColor } : {}]}
-          >
-            {
-              (this.props.isShowActivity && !this.state.isError) &&
-              <ActivityIndicator
-                style={styles.activityIndicator}
-                size={loadingStyle ? loadingStyle.size : 'small'}
-                color={loadingStyle ? loadingStyle.color : 'gray'}
-              />
-            }
-            <Image
-              style={placeholderStyle ? placeholderStyle : [styles.imagePlaceholderStyles, customImagePlaceholderDefaultStyle]}
-              source={placeholderSource ? placeholderSource : require('./Images/empty-image.png')}
+            <View
+              style={[styles.viewImageStyles, { borderRadius: borderRadius }, backgroundColor ? { backgroundColor: backgroundColor } : {}]}
             >
-            </Image>
-          </View>
-        }
-        {
-          this.props.children &&
-          <View style={styles.viewChildrenStyles}>
-          {
-            this.props.children
-          }
-          </View>
+              <ImageBackground
+                style={placeholderStyle ? placeholderStyle : [styles.imagePlaceholderStyles, customImagePlaceholderDefaultStyle, style]}
+                imageStyle={style}
+                source={placeholderSource ? placeholderSource : require('./Images/empty-image.png')}
+              >
+                {children}
+              </ImageBackground>
+            </View>
         }
       </ImageBackground>
     );
